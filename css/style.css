@@ -55,7 +55,7 @@ img{
 /* Герой */
 .hero{
     min-height: 95vh;
-    background-image: url(/pics/Desktop1.png);
+    background-image: url(../pics/Desktop1.png);
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
@@ -221,7 +221,7 @@ img{
     -moz-border-radius: 190px;
     -webkit-border-radius: 190px;
     border-radius: 190px;
-    background-image: url(/pics/phoneEllipse.png);
+    background-image: url(../pics/phoneEllipse.png);
 }
 .hero__phone-cover-border{
     border-radius: 50%;
@@ -724,7 +724,7 @@ input[type="range"]::-ms-fill-upper {
     -moz-border-radius: 190px;
     -webkit-border-radius: 190px;
     border-radius: 190px;
-    background-image: url(/pics/phoneEllipse.png);
+    background-image: url(../pics/phoneEllipse.png);
 }
 .store__right-cover-border{
     display: grid;
