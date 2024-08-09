@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Karla:ital,wght@0,200..800;1,200..800&family=Kenia&family=Libre+Barcode+128+Text&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <title>MP</title>
+</head>
+<body>
+    <main class="main">
+        <section id="hero" class="hero">
+            <div class="hero__container">
+                <div class="hero__top">
+                    <div class="hero__logo yellow">MP</div>
+                    <div class="hero__links">
+                        <div class="hero__link"><a class="scroll-to yellow" href="#">HOME</a></div>
+                        <div class="hero__link"><a class="scroll-to yellow" href="#music">MUSIC</a></div>
+                        <div class="hero__link"><a class="scroll-to yellow" href="#about">ABOUT</a></div>
+                        <div class="hero__link"><a class="scroll-to yellow" href="#store">STORE</a></div>
+                    </div>
+                </div>
+                <div class="hero__main">
+                    <div class="hero__text">
+                        <div class="hero__big-logo yellow">MUSIC<br>PLAYER</div>
+                        <div class="hero__subtitle">
+                            American company formed in 2002 in Boston, Massachusetts
+                        </div>
+                    </div>
+                    <div class="hero__phone">
+                        <div class="hero_phone-container">
+                            <div class="hero__phone-top">
+                                <div class="hero__btn--border">
+                                    <button class="hero__btn-prev">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </button>
+                                </div>
+                                <span>Music Player</span>
+                                <div class="hero__btn--border">
+                                    <button class="hero__btn-burger js-open-modal" data-modal="1">
+                                        <i class="fas fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="hero__phone-middle">
+                                <div class="hero__phone-cover-border">
+                                    <div class="hero__phone-album-cover"></div>
+                                </div>
+                                <div class="hero__phone-song-title">Your Music</div>
+                                <div class="hero__phone-song-artist">Artist</div>
+                                <div class="hero__phone-progress-bar">
+                                    <input type="range" class="seek-slider" min="1" max="100" value="0" onchange="seekTo()">
+                                </div>
+                            </div>
+                            <div class="hero__phone-bottom">
+                                <div class="hero-bottom__btn--border">
+                                    <button class="hero__btn-before" onclick="prevTrack()">
+                                        <i class="fas fa-backward"></i>
+                                    </button>
+                                </div>
+                                <div class="hero-bottom__btn--border-red">
+                                    <button id="playpause-btn" class="hero__btn-playpause" onclick="playPauseTrack()">
+                                        <i class="fas fa-play"></i>
+                                        <!-- <i class="fas fa-play"></i> -->
+                                    </button>
+                                </div>
+                                <div class="hero-bottom__btn--border">
+                                    <button class="hero__btn-after" onclick="nextTrack()">
+                                        <i class="fas fa-forward"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone__burger-modal modal" id="phone__burger-modal" data-modal="1">
+                            <div class="burger-modal-top">
+                                <i class="fas fa-volume-up">
+                                    <input type="range" class="volume-slider" min="1" max="100" value="45" onchange="setVolume()">
+                                </i>
+                                <div class="burger-modal-top-right">
+                                    <div class="hero__btn--border">
+                                        <button class="phone__modal-btn-replay" onclick="repeatTrack()">
+                                            <i class="fas fa-redo"></i>
+                                        </button>
+                                    </div>
+                                    <div class="hero__btn--border">
+                                        <button  class="phone__burger-modal-close js-modal-close">
+                                            <i class="fa-solid fa-x"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="burger-modal-main">
+                                <a href="">Dark Pagan</a><br>
+                                <a href="">Live Viking</a><br>
+                                <a href="">Live Nature</a><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="music" class="music">
+            <div class="music__container">
+                <h2 class="music__title yellow">Music</h2>
+                <div class="music__main">
+                    <div class="music__btns">
+                        <button class="music__btn yellow">Listen now</button>
+                        <button class="music__btn yellow">Find a song...</button>
+                    </div>
+                    <div class="music__pic">
+                        <img src="/pics/hand the act.png" alt="Cool hand with vynil">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="about__container">
+                <div class="about__title yellow">About</div>
+                <div class="about__main">
+                    MusicPlayer gives you instant access to millions of songs – from old 
+                    favorites to the latest hits. Just hit play to stream anything you like.
+                </div>
+            </div>
+        </section>
+        <section id="store" class="store">
+            <div class="store__container">
+                <h2 class="store__title yellow">Store</h2>
+                <div class="store__main">
+                    <div class="store__left">
+                        <div class="store__left-btns">
+                            <div class="store__left-btn">Download<br>Windows x64</div>
+                            <div class="store__left-btn">Download<br>MacOS</div>
+                        </div>
+                        <div class="store__left-text">
+                            <h5 class="store__left-title">Нужна предыдущая версия MPlayer?</h5>
+                            <div class="store__left-subtitle">
+                                Вы можете скачать одну из предыдущих версий MPlayer, 
+                                которая совместима с нужной вам версией операционной системы и 
+                                определёнными устройствами.
+                            </div>
+                            <div class="store__left-link yellow">Выберите предыдущую версию MPlayer</div>
+                        </div>
+                    </div>
+                    <div class="store__right">
+                         <div class="store__right-container">
+                            <div class="store__right-header">
+                                <h3 class="store__right-logo">Music<br>Player</h3>
+                                <div class="store__right-cover-border">
+                                    <div class="store__right-album-cover"></div>
+                                </div>
+                                <div class="store__right-main-music">
+                                    <div class="store__right-song-names">
+                                        <span class="title">Your Music</span> - <span class="artist">Artist</span>
+                                    </div>
+                                    <div class="store__right-progress-bar">
+                                        <input type="range" class="seek-slider" min="1" max="100" value="0" onchange="seekTo()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="store__right-main">
+                                <div class="store__right-sidebar">
+                                    <div class="container">
+                                        <div class="store__right-search">
+                                            <form>
+                                                <input type="text" placeholder="Поиск..." name="s" type="search">
+                                                <button type="submit"></button>
+                                              </form>
+                                        </div>
+                                        <div class="store__right-filters">
+                                            <button class="store__right-filter">Для вас</button>
+                                            <button class="store__right-filter">Песни</button>
+                                            <button class="store__right-filter">Артисты</button>
+                                            <button class="store__right-filter">Альбомы</button>
+
+                                            
+                                            <button class="store__right-store">Store</button>
+                                        </div>
+                                    </div>   
+                                </div>
+
+                                <div class="store__right-mainlist">
+                                    <div class="store__right-btns">
+                                        <button class="topTen">Топ 10</button>
+                                        <button class="find">Найти</button>
+                                    </div>
+                                    <div class="store__right-tracks">
+                                        <div class="store__right-track">
+                                            <img src="/pics/trackImg1.png" alt="" class="store__right-track-img">
+                                            <h5 class="store__right-track-author">СБПЧ</h5>
+                                            <h6 class="store__right-track-title">Здесь и всегда</h6>
+                                        </div>
+                                        <div class="store__right-track">
+                                            <img src="/pics/trackImg2.png" alt="" class="store__right-track-img">
+                                            <h5 class="store__right-track-author">Sufjan Stevens</h5>
+                                            <h6 class="store__right-track-title">Carrie & Lowell</h6>
+                                        </div>
+                                        <div class="store__right-track">
+                                            <img src="/pics/trackImg3.png" alt="" class="store__right-track-img">
+                                            <h5 class="store__right-track-author">Hudson Mohawke</h5>
+                                            <h6 class="store__right-track-title">Lantern</h6>
+                                        </div>
+                                        <div class="store__right-track">
+                                            <img src="/pics/trackImg4.png" alt="" class="store__right-track-img">
+                                            <h5 class="store__right-track-author">Pinkshinyultrablast</h5>
+                                            <h6 class="store__right-track-title">Everything Else Matters</h6>
+                                        </div>
+                                        <div class="store__right-track">
+                                            <img src="/pics/trackImg5.png" alt="" class="store__right-track-img">
+                                            <h5 class="store__right-track-author">Floating Points</h5>
+                                            <h6 class="store__right-track-title">Elaenia</h6>
+                                        </div>
+                                        <div class="store__right-track">
+                                            <img src="/pics/trackImg6.png" alt="" class="store__right-track-img">
+                                            <h5 class="store__right-track-author">Shamir</h5>
+                                            <h6 class="store__right-track-title">Ratchet</h6>
+                                        </div>
+                                        <div class="store__right-track">
+                                            <img src="/pics/trackImg7.png" alt="" class="store__right-track-img">
+                                            <h5 class="store__right-track-author">Grimes</h5>
+                                            <h6 class="store__right-track-title">Art Angels</h6>
+                                        </div>
+                                        <div class="store__right-track">
+                                            <img src="/pics/trackImg8.png" alt="" class="store__right-track-img">
+                                            <h5 class="store__right-track-author">Tame Impala</h5>
+                                            <h6 class="store__right-track-title">Currents</h6>
+                                        </div>
+                                        <div class="store__right-track">
+                                            <img src="/pics/trackImg9.png" alt="" class="store__right-track-img">
+                                            <h5 class="store__right-track-author">Jamie xx</h5>
+                                            <h6 class="store__right-track-title">In Colour</h6>
+                                        </div>
+                                        <div class="store__right-track">
+                                            <img src="/pics/trackImg10.png" alt="" class="store__right-track-img">
+                                            <h5 class="store__right-track-author">Kendrick Lamar</h5>
+                                            <h6 class="store__right-track-title">To Pimp A Butterfly</h6>
+                                        </div>
+                                    </div>
+                                    <div class="store__right-controls">
+                                        <div class="store__right-contr-settings">
+                                            <button class=""><i class="fas fa-bars"></i></button>
+                                            <button class=""><i class="fas fa-podcast"></i></button>
+                                            <button class=""><i class="fas fa-sliders"></i></button>
+                                        </div>
+                                        <div class="store__right-contr-btns">
+                                            <div class="hero-bottom__btn--border">
+                                                <!-- onclick="prevTrack()" -->
+                                                <button class="hero__btn-before">
+                                                    <i class="fas fa-backward"></i>
+                                                </button>
+                                            </div>
+                                            <div class="hero-bottom__btn--border-red">
+                                                <!-- onclick="playPauseTrack()" -->
+                                                <button id="playpause-btn" class="hero__btn-playpause" >
+                                                    <i class="fas fa-play"></i>
+                                                    <!-- <i class="fas fa-play"></i> -->
+                                                </button>
+                                            </div>
+                                            <div class="hero-bottom__btn--border">
+                                                <!-- onclick="nextTrack()" -->
+                                                <button class="hero__btn-after" >
+                                                    <i class="fas fa-forward"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="store__right-contr-volume">
+                                            <input type="range" class="volume-slider" min="1" max="100" value="75" onchange="setVolume()">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                         <span class="mac">Macbook PRO</span>
+                         <span class="bottomLaptop"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top">
+                <div class="footer__lists">
+                    <h6 class="footer__list-title">MPlayer Store</h6>
+                    <ul class="footer__list">
+                        <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Варианты оплаты</a></li>
+                        <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Состояние заказа</a></li>
+                        <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Помощь при покупке</a></li>
+                    </ul>
+                </div>
+                <div class="footer__lists">
+                    <h6 class="footer__list-title">Ценности MPlayer</h6>
+                    <ul class="footer__list">
+                        <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Универсальный доступ</a></li>
+                        <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Окружающая среда</a></li>
+                        <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Конфиденциальность</a></li>
+                    </ul>
+                </div>
+                <div class="footer__lists">
+                    <h6 class="footer__list-title">Учётная запись</h6>
+                    <ul class="footer__list">
+                        <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Управление вашим MPlayer ID</a></li>
+                        <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Учётная запись MPlayer Store</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__big-logo yellow">MUSIC<br>PLAYER</div>
+                <ul class="footer__list">
+                    <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">© MPlayer Inc., 2022 г. Все права защищены.</a></li>
+                    <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Условия использования</a></li>
+                    <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Продажа и возврат</a></li>
+                    <li class="footer__list-elem"><a href="#" class="footer__list-link yellow">Юридическая информация</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer> 
+</body>
+</html>

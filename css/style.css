@@ -1,0 +1,1032 @@
+/* Обнуление */
+*{padding:0;margin:0;border:0;}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display: block;}
+html,body{height: 100%;width: 100%;font-size: 100%;line-height: 1.7;font-size: 16px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%; }
+input,button,textarea{font-family: inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;cursor:pointer;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/* -------- */
+body{
+    color: white;
+}
+
+/* Изменение цвета выделения текста */
+/* *::selection {
+    background: #ff9100af;
+}  
+*::-moz-selection {
+    background: #ff9100af; 
+} 
+*/
+
+img{
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+.rotate{
+    animation: rotation 8s infinite linear;
+}
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
+.yellow:hover {
+    color: rgb(255, 174, 0);
+    transition: linear .5s color;
+}
+
+/* Герой */
+.hero{
+    min-height: 95vh;
+    background-image: url(/pics/Desktop1.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.hero__container{
+    padding: 5% 110px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.hero__top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero__logo{
+    font-size: 80px;
+    font-family: "Libre Barcode 128 Text";
+    cursor: pointer;
+}
+
+.hero__links{
+    display: flex;
+    flex-direction: row;
+}
+
+.hero__link{
+    font-size: 18px;
+    font-family: "Istok Web";
+    margin-left: 150px;
+}
+.hero__link a{
+    color: #fff;
+}
+
+.hero__main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero__text{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__big-logo{
+    font-size: 150px;
+    font-family: "Kenia";
+    line-height: 1;
+    margin: 1.17em 0px;/*175px 0px*/
+}
+
+.hero__subtitle{
+    font-size: 20px;
+    font-family: "Istok Web";
+    max-width: 26ch;
+}
+
+/* Hero phone*/
+
+
+/* Начало телефона */
+.hero__phone{
+    width: 40%;
+}
+
+.hero__phone button{transition: color .3s linear;}
+.hero__phone button:hover{color: #fff;}
+
+.hero_phone-container{
+    background: linear-gradient(to bottom,#4C4F57, #343B43);
+    border: 15px solid #0f0f0f;
+    border-radius: 5em;
+    position: relative;
+    /* Тени */
+    -webkit-box-shadow: 12px 15px 40px 0px rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: 12px 15px 40px 0px rgba(255, 255, 255, 0.25);;
+    box-shadow: 12px 15px 40px 0px rgba(255, 255, 255, 0.25);
+}
+
+.hero_phone-container::before{
+    content: "";
+    height: 3.5%;
+    width: 40%;
+    background-color: #0f0f0f;
+    border-radius: 5em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 30%;
+}
+
+.hero__phone-top{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: "Montserrat";
+    color: #C1C4CB;
+    padding: 30px;
+}
+
+/* Малые кнопки */
+.hero__btn-prev, .hero__btn-burger,
+.phone__modal-btn-replay, .phone__burger-modal-close{
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    font-size: .9em;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #C1C4CB;
+    background: linear-gradient(to bottom right, #4E5256 0%, #13171b5e 100%); 
+}
+
+.hero__btn--border{
+    display: grid;
+    place-items: center;
+    /* Рамка */
+    padding: 3px;
+    background: linear-gradient(to bottom right, #13171b5e 0%, #4E5256 100%);
+    border-radius: 50%;
+    /* Тени */
+    box-shadow: 4px 4px 4px 0px rgba(64, 68, 73, 1),
+        -4px -4px 4px 0px rgba(255, 255, 255, 0.06);
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(64, 68, 73, 1),
+        -4px -4px 4px 0px rgba(255, 255, 255, 0.06);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(64, 68, 73, 1),
+        -4px -4px 4px 0px rgba(255, 255, 255, 0.06);
+}
+
+/* Середина телефона */
+.hero__phone-middle{
+    margin: 70px 0;
+    display: grid;
+    place-items: center;
+    font-family: Montserrat;
+}
+
+.hero__phone-album-cover{
+    display: grid;
+    place-items: center;
+    position: relative;
+    width: 265px;
+    height: 265px;
+    margin: 14px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    -moz-border-radius: 190px;
+    -webkit-border-radius: 190px;
+    border-radius: 190px;
+    background-image: url(/pics/phoneEllipse.png);
+}
+.hero__phone-cover-border{
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #13171b5e 0%, #4E5256 100%);
+        /* Тени */
+        box-shadow: 4px 4px 4px 0px #404449,
+        -4px -4px 15px 0px rgba(255, 255, 255, 0.06);
+    -webkit-box-shadow: 4px 4px 4px 0px #404449,
+        -4px -4px 15px 0px rgba(255, 255, 255, 0.06);
+    -moz-box-shadow: 4px 4px 4px 0px #404449,
+        -4px -4px 15px 0px rgba(255, 255, 255, 0.06);
+}
+
+.hero__phone-song-title{
+    font-size: 24px;
+    font-weight: 700;
+    width: 25ch;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.hero__phone-song-artist{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    width: 25ch;
+    text-align: center;
+    opacity: .7;
+    margin-bottom: 10%;
+}
+
+/* Слайдер прогресса и звука*/
+.hero__phone-progress-bar{width: 80%;}
+
+.seek-slider{width: 100%;}
+.volume-slider{margin-left: -3px;}
+
+.seek-slider, .volume-slider{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #000;
+    border-radius: 5em;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    /* Тени */
+    -webkit-box-shadow: 2px 2px 4px 0px rgba(255, 255, 255, 0.15),
+        -2px -2px 4px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 2px 4px 0px rgba(255, 255, 255, 0.15),
+        -2px -2px 4px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px 0px rgba(255, 255, 255, 0.15),
+        -2px -2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.seek-slider:hover, 
+.volume-slider:hover{
+    opacity: 1.0;
+}
+
+.seek-slider::-webkit-slider-thumb, 
+.volume-slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: #E7B028;
+    border: 8px solid #262A2F;
+    cursor: pointer;
+    border-radius: 100%;
+    /* Тени */
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        -1px -1px 4px 0px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        -1px -1px 4px 0px rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        -1px -1px 4px 0px rgba(255, 255, 255, 0.1);
+}
+
+/* Mozilla */
+input[type="range"]::-moz-range-progress {
+    background: linear-gradient(to right, #D42F04 30%, #F3511C 100%);
+    height: 7px;
+    border-radius: 5em;
+}
+/* IE */
+input[type="range"]::-ms-fill-lower {
+    background: linear-gradient(to right, #D42F04 30%, #F3511C 100%);
+    border: 0 solid #000101;
+    border-radius: 5em;
+    box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+}
+input[type="range"]::-ms-fill-upper {
+    background: linear-gradient(to right, #D42F04 30%, #F3511C 100%);
+    border: 0 solid #000101;
+    border-radius: 5em;
+    box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+}
+/* В Хром никак :[ */
+
+
+/* Низ телефона */
+.hero__phone-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 70px;
+}
+
+.hero__btn-before, .hero__btn-after, .hero__btn-playpause{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.hero__btn-before, .hero__btn-after{
+    color: #91949B;
+    background: linear-gradient(to bottom right, #4E5256 0%, #13171b5e 60%); 
+}
+
+.hero__btn-playpause{
+    color: #fff;
+    background: linear-gradient(to bottom right, #a02202 0%, #F6541D 70%); 
+}
+
+.hero-bottom__btn--border{
+    /* Рамка */
+    padding: 2px;
+    background: linear-gradient(to bottom right, #13171b5e 0%, #4E5256 100%);
+    border-radius: 50%;
+    /* Тени */
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -6px -6px 15px 0px rgba(255, 255, 255, 0.05);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -6px -6px 15px 0px rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -6px -6px 15px 0px rgba(255, 255, 255, 0.05);
+}
+.hero-bottom__btn--border-red{
+    /* Рамка */
+    padding: 2px;
+    background: linear-gradient(to bottom right, #F6541D 0%, #D22D03 100%);
+    border-radius: 50%;
+    /* Тени */
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -6px -6px 15px 0px rgba(255, 255, 255, 0.05);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -6px -6px 15px 0px rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -6px -6px 15px 0px rgba(255, 255, 255, 0.05);
+}
+
+/* Hero, phone, burger modal*/
+.modal{
+    /* Скрываем окна  */
+   opacity: 0;
+   visibility: hidden;
+}
+
+.modal.active{
+   opacity: 1;
+   visibility: visible;
+}
+
+.hero__phone{position: relative;}
+.phone__burger-modal{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #343b43e5;
+    color: #C1C4CB;
+    font-size: 20px;
+    padding: 35px;
+    border-radius: 4em;
+    border: 15px solid #0f0f0f;
+    transition: .3s all;
+}
+
+.phone__burger-modal::before{
+    content: "";
+    height: 3.5%;
+    width: 40%;
+    background-color: #0f0f0f;
+    border-radius: 5em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 30%;
+}
+
+.burger-modal-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+
+.burger-modal-top-right{
+    display: flex;
+    flex-direction: row;
+}
+
+.burger-modal-main a{
+    color: #C1C4CB;
+    transition: color linear .3s;
+    line-height: 2;
+    padding-bottom: .3em;
+    border-bottom: 1px #fff outset;
+}
+
+.burger-modal-main a:hover{
+    color: #fff;
+}
+
+/* Music */
+.music{
+    min-height: 90vh;
+    background-color: #D53005;
+}
+
+.music__container{
+    font-family: "Karla";
+    font-style: 18px;
+    padding: 5% 110px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.music__title{
+    font-size: 30px;
+}
+
+.music__main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
+.music__btns{
+    display: flex;
+    flex-direction: column;
+}
+
+.music__btn{
+    font-size: 40px;
+    color: #fff;
+    background: linear-gradient(to right, #B13E18, #F3501A);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5), 
+        -4px -4px 30px 0px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5),
+    -4px -4px 30px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.5),
+    -4px -4px 30px 0px rgba(255, 255, 255, 0.2);
+    padding: .45em 2.33em;/*18px 93px*/
+}
+.music__btn:first-child{
+    margin-bottom: 90px;
+}
+
+.music__pic{
+    max-width: 50%;
+}
+
+/* About */
+.about{
+    min-height: 90vh;
+    background: linear-gradient(to bottom, #D53005, #000 10%);
+}
+
+.about__container{
+    font-family: "Karla";
+    font-size: 30px;
+    padding: 5% 110px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.about__main{
+    margin-top: 30%;
+    margin-left: 15%;
+    width: 55ch;
+}
+
+/* Store */
+.store{
+    min-height: 90vh;
+    background-color: #D53005;
+}
+
+.store__container{
+    font-family: "Karla";
+    font-style: 18px;
+    padding: 5% 110px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.store__title{font-size: 30px;}
+
+.store__main{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.store__left{
+    font-family: "Montserrat";
+    width: 35%;
+}
+
+.store__left-btns{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 55%;
+    margin-bottom: 30%;
+}
+
+.store__left-btn{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    font-weight: 500;
+    padding: 6px 24px;
+    border-radius: 5em;
+    box-shadow:0px 0px 0px 1px rgba(0, 0, 0, 0.7) inset;   
+    transition: filter linear .5ms;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -4px -4px 4px 0px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -4px -4px 4px 0px rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -4px -4px 4px 0px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all linear .3s;
+}
+.store__left-btn:not(:first-child){
+    color: #000;
+    background-color: #fff;
+    margin-top: 2.4em;
+}
+
+/* .store__left-btn:hover {
+    animation: shake 2s;
+    animation-iteration-count: infinite;
+} */
+.store__left-btn:hover {
+    color: #000;
+    background-color: rgb(255, 174, 0);
+}
+.store__left-btn:not(:first-child):hover{
+    color: #fff;
+    background-color: rgb(255, 174, 0);
+}
+
+.store__left-title{
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.store__left-subtitle, .store__left-link{
+    font-size: 18px;
+    text-align: center;
+}
+.store__left-link{
+    color: #000; 
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Store MacbookPRO */
+.store__right{
+    width: 85%;
+    font-family: "Montserrat", serif;
+    background-color: #1A202C;
+    padding: 2px 2px 1.5em 2px;
+    border: #4A5568 2px solid;
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+    border-bottom-width: 0;
+    position: relative;
+}
+
+.store__right .mac{
+    color: #A0AEC0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: .9;
+    position: absolute;
+    bottom: 1%;
+    left: 45%;
+}
+.store__right .bottomLaptop{
+    background: linear-gradient(to right, #0D1012 0%, #CAD4DB 3%,
+        #242729 6%, #A3ACB1 13%, #A3ACB1 87%, #242729 94%,
+        #CAD4DB 97%, #0D1012 100%);
+    height: 20px;
+    width: 120%;
+    position: absolute;
+    bottom: -3%;
+    left: -10%;
+}
+.store__right .bottomLaptop::after{
+    content: "";
+    background: linear-gradient(to bottom, #7A7F83 0%, #0B0B0E 100%);
+    height: 14px;
+    width: 100%;
+    position: absolute;
+    bottom: -39%;
+    left: 0%;
+    border-radius: 100%;
+}
+.store__right .bottomLaptop::before{
+    content: "";
+    background: linear-gradient(to right, #3C3C3C 0%, #96A1A8 32%,
+        #96A1A8 66%, #444444 100%);
+    height: 8px;
+    width: 10%;
+    position: absolute;
+    top: 0%;
+    left: 45.5%;
+    border-radius: 5em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.store__right-container{
+    background: linear-gradient(to right, #343B43 0%, #484D54 100%);
+    border: #000 20px solid;
+    border-bottom-width: 10px;
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+    position: relative;
+}
+
+.store__right-main{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Верхушка мака */
+.store__right-header{
+    padding: 23px;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 10% 10% 60%;
+    grid-column-gap: 10%;
+    border-bottom: rgba(0, 0, 0, 0.5) 1px solid;
+}
+
+.store__right-logo{
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.3;
+    position: relative;
+}
+.store__right-logo::after{
+    content: "";
+    width: 100%;
+    height: 180%;
+    position: absolute;
+    top: -35%;
+    right: -28%;
+    border-right: rgba(0, 0, 0, 0.5) 1px solid;
+}
+
+.store__right-album-cover{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    -moz-border-radius: 190px;
+    -webkit-border-radius: 190px;
+    border-radius: 190px;
+    background-image: url(/pics/phoneEllipse.png);
+}
+.store__right-cover-border{
+    display: grid;
+    place-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -moz-border-radius: 190px;
+    -webkit-border-radius: 190px;
+    border-radius: 190px;
+    background: linear-gradient(to bottom right, #13171b5e 0%, #4E5256 100%);
+        /* Тени */
+        box-shadow: 4px 4px 4px 0px #404449,
+        -4px -4px 15px 0px rgba(255, 255, 255, 0.06);
+    -webkit-box-shadow: 4px 4px 4px 0px #404449,
+        -4px -4px 15px 0px rgba(255, 255, 255, 0.06);
+    -moz-box-shadow: 4px 4px 4px 0px #404449,
+        -4px -4px 15px 0px rgba(255, 255, 255, 0.06);
+}
+
+.store__right-song-names{
+    text-align: center;
+    font-size: 10px;
+}
+
+.store__right-song-names .title{
+    font-weight: 700;
+}
+
+.store__right-song-names .artist{
+    font-weight: normal;
+}
+
+/* Левушка мака */
+.store__right-sidebar{
+    width: 15%;
+    font-size: 9px;
+    border-right: rgba(0, 0, 0, 0.5) 1px solid;
+}
+
+.store__right-search form {
+    background: rgba(163, 208, 195, 0.2);
+    border-radius: 5em;
+    padding: 0px 10px 0px 10px;
+    margin: 15px 10px 20% 10px;
+    /* Тени */
+    box-shadow: 4px 4px 4px 0px #00000010,
+        -4px -4px 14px 0px rgba(255, 255, 255, 0.06);
+    -webkit-box-shadow: 4px 4px 4px 0px #00000010,
+        -4px -4px 14px 0px rgba(255, 255, 255, 0.06);
+    -moz-box-shadow: 4px 4px 4px 0px #00000010,
+        -4px -4px 14px 0px rgba(255, 255, 255, 0.06);
+}
+.store__right-search input, .store__right-search button {
+    font-size: 9px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.store__right-search input {
+    color: #000; 
+}
+input::-webkit-input-placeholder {
+    color: #000; 
+}
+input:-moz-placeholder {
+    color: #000; 
+}
+input:-ms-input-placeholder {
+    color: #000; 
+}
+
+.store__right-search button {
+    cursor: pointer;
+    /* position: relative; */
+}
+/* .store__right-search button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 13px;
+    color: #000;
+    position: absolute;
+    top: -75%;
+    right: -500%;
+} */
+
+
+.store__right-filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.store__right-filters button{
+    font-size: 9px;
+    border-radius: 5em;
+    padding: 10px;
+    margin: 5px 10px;
+    color: #fff;
+    /* box-shadow:0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset; */
+    /* Тени */
+    box-shadow: 4px 4px 4px 0px #00000010,
+        -4px -4px 14px 0px rgba(255, 255, 255, 0.06),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 4px 4px 4px 0px #00000010,
+        -4px -4px 14px 0px rgba(255, 255, 255, 0.06),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 4px 4px 4px 0px #00000010,
+        -4px -4px 14px 0px rgba(255, 255, 255, 0.06),
+        0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset;
+}
+.store__right-filters button:hover{
+    box-shadow: 4px 4px 4px 0px #00000010,
+        -4px -4px 14px 0px rgba(255, 255, 255, 0.06),
+        0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
+    -webkit-box-shadow: 4px 4px 4px 0px #00000010,
+        -4px -4px 14px 0px rgba(255, 255, 255, 0.06),
+        0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
+    -moz-box-shadow: 4px 4px 4px 0px #00000010,
+        -4px -4px 14px 0px rgba(255, 255, 255, 0.06),
+        0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
+    /* box-shadow:0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset; */
+}
+.store__right-filter:nth-child(1){
+    background-color: rgba(255, 0, 0, 0.2);
+}
+.store__right-filter:nth-child(2){
+    background-color: rgba(5, 255, 0, 0.2);
+}
+.store__right-filter:nth-child(3){
+    background-color: rgba(5, 0, 255, 0.2);
+}
+.store__right-filter:nth-child(4){
+    background-color: rgba(255, 230, 0, 0.2);
+}
+.store__right-filters button:last-child{
+    background-color: rgba(255, 0, 199, 0.3);
+    margin-top: 30%;
+}
+
+/* Середина мака */
+.store__right-btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+.store__right-btns .topTen, 
+.store__right-btns .find{
+    color: #fff;
+    font-size: 9px;
+    font-weight: 500;
+    padding: .5em 1em;
+    box-shadow:0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset;
+}
+.store__right-btns .topTen, 
+.store__right-btns .find:hover{
+    box-shadow:0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+.store__right-btns .topTen{background-color: rgba(14, 0, 176, 0.5);}
+.store__right-btns .find{background-color: rgba(2, 255, 73, 0.5);}
+
+.store__right-tracks{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: "Montserrat", serif;
+    margin-bottom: 2em;
+}
+
+.store__right-track{
+    max-width: 105px;
+    margin: 0px .5em 1em .5em;
+    cursor: pointer;
+}
+
+.store__right-track-img{
+    width: 100%;
+}
+
+.store__right-track-author{
+    font-size: 9px;
+}
+.store__right-track-title{
+    font-size: 7px;
+}
+
+/* Контроляшки макоса внизу */
+.store__right-controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: rgba(0, 0, 0, 0.5) 1px solid;
+    padding: .5em 0;
+}
+
+.store__right-contr-settings button{
+    background: transparent;
+    font-size: 25px;
+}
+.store__right-contr-settings button:not(:last-child){
+    margin-right: .5em;
+}
+
+.store__right-contr-btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.store__right-contr-btns  button{
+    width: 53px;
+    height: 53px;
+    font-size: 15px;
+}
+.store__right-contr-btns .hero-bottom__btn--border-red{
+    margin: 0 1em;
+}
+
+/* .store__right-contr-btns  button:hover{
+
+} */
+
+/* Ползунки как в телефоне */
+.store__right-contr-volume{
+    width: 25%;
+}
+.store__right-contr-volume .seek-slider{
+    height: 9px;
+}
+.store__right-contr-volume .volume-slider{
+    height: 7px;
+    width: 100%;
+}
+
+.store__right-contr-volume .seek-slider::-webkit-slider-thumb{
+    width: 27px;
+    height: 27px;
+}
+.store__right-contr-volume .volume-slider::-webkit-slider-thumb{
+    width: 25px;
+    height: 25px;
+    border-width: 7px;
+}
+
+
+/* Footer */
+.footer{
+    background: linear-gradient(to bottom, #D53005, #000 5%);
+    color: #fff;
+}
+
+.footer__container{
+    font-family: "Montserrat";
+    font-style: 16px;
+    padding: 5% 110px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.footer__top{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-bottom: 4.7em; /*75px*/
+}
+
+.footer__lists:not(:last-child){
+    margin-right: 9.2em;
+}
+
+.footer__list-title{
+    font-size: 20px;
+    font-weight: 600; 
+    line-height: 3;
+}
+
+.footer__list-link{
+    color: #fff;
+    line-height: 2.5;
+}
+
+.footer__bottom{
+    display: flex;
+    flex-direction: column;  
+}
+
+.footer__bottom .footer__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__big-logo{
+    font-size: 50px;
+    font-family: "Kenia";
+    line-height: 1;
+}
