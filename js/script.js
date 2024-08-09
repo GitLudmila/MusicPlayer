@@ -76,28 +76,28 @@ let updateTimer;
 
 const music_list = [
     {
-        img : "../pics/phoneEllipse.png",
+        img : "./pics/phoneEllipse.png",
         name : "Rain and Thunder - Nature Sounds",
         artist : "JuliusH",
-        music : "../musics/RainAndThunder-NatureSounds.mp3"
+        music : "./musics/RainAndThunder-NatureSounds.mp3"
     },
     {
-        img : "../pics/undertale.jpg",
+        img : "./pics/undertale.jpg",
         name : "Start Menu",
         artist : "Toby Fox",
-        music : "../musics/StartMenu.mp3"
+        music : "./musics/StartMenu.mp3"
     },
     {
-        img : "../pics/ostrovSokrovishc.jpg",
+        img : "./pics/ostrovSokrovishc.jpg",
         name : "Шанс!",
         artist : "Остров сокровищ",
-        music : "../musics/OstrovSokrovishcChance.mp3"
+        music : "./musics/OstrovSokrovishcChance.mp3"
     },
     {
-        img : "../pics/undertale.jpg",
+        img : "./pics/undertale.jpg",
         name : "Your Best Friend",
         artist : "Toby Fox",
-        music : "../musics/YourBestFriend.mp3"
+        music : "./musics/YourBestFriend.mp3"
     },
 ];
 
