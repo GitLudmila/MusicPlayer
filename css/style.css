@@ -55,7 +55,7 @@ img{
 /* Герой */
 .hero{
     min-height: 95vh;
-    background-image: url(../pics/desktop.png);
+    background-image: url(./pics/desktop.png);
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
